@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  position: relative;
+
+  background: linear-gradient(114deg, #008cff, #00fdff);
+  background-size: 400% 400%;
+
+  animation: GradnientAnimation 30s ease infinite;
+
+  font-family: "Ubuntu", sans-serif;
+
+  overflow: hidden;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+img {
+  margin-top: 8px;
+  margin-left: 8px;
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+}
+
+audio {
+  visibility: false;
+}
+
+.dc {
+  height: 256px;
+  width: 256px;
+  background-color: white;
+  border-radius: 100%;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-left: -128px;
+  margin-top: -128px;
+
+  box-shadow: 0px 32px 128px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  animation-name: showme;
+  animation-duration: 4s;
+}
+
+.dc-name {
+  color: white;
+  text-shadow: 2px 2px 20px black;
+  margin-top: 30px;
+  font-size: 45px;
+  transform: translate(-15%);
+  white-space: nowrap;
+}
+
+.clickme {
+  color: white;
+  text-shadow: 2px 2px 20px black;
+  font-size: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -160%);
+
+  animation-name: bounce;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+
+  white-space: nowrap;
+
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.clickme.hide {
+  opacity: 0;
+}
+
+.copied {
+  text-align: center;
+  border: 2px solid rgb(116, 124, 136);
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
+  border-top-width: 8px;
+  background-color: rgb(116, 124, 136);
+  color: white;
+  left: 50%;
+  transform: translate(75%, 0%);
+
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.copied.hide {
+  opacity: 0;
+}
+
+.particles-js {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.blur {
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 25px;
+  border: 2.5px solid rgb(255, 255, 255);
+
+  background-color: rgba(256, 256, 256, 0.61);
+  backdrop-filter: blur(5px);
+
+  opacity: 0.61;
+  transition: opacity 0.5s linear;
+}
+
+.blur.hide {
+  opacity: 0;
+}
+
+@keyframes showme {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 45%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    font-size: 45px;
+  }
+  50% {
+    font-size: 60px;
+  }
+  100% {
+    font-size: 45px;
+  }
+}
+
+@keyframes GradnientAnimation {
+  0% {
+    background-position: 0% 25%;
+  }
+  50% {
+    background-position: 100% 76%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
+}
