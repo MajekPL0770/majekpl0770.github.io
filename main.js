@@ -11,7 +11,7 @@ $("#clickme").click(function () {
   }, 2700);
 });
 $("#dc-name").click(function () {
-  navigator.clipboard.writeText("! Majek_PL#1337");
+  navigator.clipboard.writeText("! Majuś#1337");
   document.getElementById("copied").classList.toggle("hide");
   setTimeout(function () {
     document.getElementById("copied").classList.add("hide");
