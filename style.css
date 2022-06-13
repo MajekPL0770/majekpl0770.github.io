@@ -52,11 +52,14 @@ audio {
 }
 
 .dc-name {
+  position: absolut;
   color: white;
   text-shadow: 2px 2px 20px black;
   margin-top: 30px;
   font-size: 45px;
-  transform: translate(-15%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
